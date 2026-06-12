@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Cur8d",
   description: "A modern Next.js starter template",
   icons: {
-    shortcut: "/cur8d.png",
+    icon: "/cur8d.png",
   },
 };
 

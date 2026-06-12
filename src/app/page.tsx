@@ -35,19 +35,19 @@ export default function Page() {
           <TemplateCard
             title="cur8d.py"
             description="Production-ready Fully-loaded Python Project Template"
-            icon="cur8d.py.png"
+            icon="python"
             url="https://cur8d.dev/python"
           />
           <TemplateCard
             title="cur8d.tsx"
             description="Production-ready TypeScript Web-Application Template with Next.js, Tailwind CSS, and HeroUI"
-            icon="cur8d.tsx.png"
+            icon="typescript"
             url="https://cur8d.dev/typescript"
           />
           <TemplateCard
             title="cur8d.lambda"
             description="Production-ready AWS Lambda Templates in Python"
-            icon="cur8d.lambda.png"
+            icon="aws"
           />
         </div>
       </section >
