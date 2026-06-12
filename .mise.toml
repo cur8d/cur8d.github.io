@@ -1,6 +1,6 @@
 [tools]
-node = "24.0.0"
-pnpm = "11.1.2"
+node = "lts"
+pnpm = "latest"
 
 [shell_alias]
 m = "mise run"
@@ -10,6 +10,7 @@ t = "mise run test"
 b = "mise run build"
 d = "mise run dev"
 s = "mise run start"
+v = "mise run verify"
 
 [tasks.install]
 description = "Install dependencies"
@@ -61,17 +62,14 @@ run = "pnpm run test:e2e"
 description = "Run E2E tests with UI"
 run = "pnpm run test:e2e:ui"
 
+[tasks."verify"]
+description = "Run all tests"
+depends = ["lint", "typecheck", "test", "test:coverage", "test:e2e", "test:e2e:ui"]
+alias = "v"
+
 [tasks."playwright:install"]
 description = "Install Playwright browsers"
 run = "pnpm exec playwright install --with-deps"
-
-[tasks."docs:dev"]
-description = "Start documentation development server"
-run = "pnpm --filter docs dev"
-
-[tasks."docs:build"]
-description = "Build the documentation"
-run = "pnpm --filter docs build"
 
 [tasks."deploy:firebase"]
 description = "Deploy the site to Firebase"
@@ -85,10 +83,6 @@ else
   firebase hosting:channel:deploy site --expires 7d --token=$FIREBASE_TOKEN
 fi
 """
-
-[tasks."deploy:firebase:docs"]
-description = "Deploy the documentation to Firebase"
-run = "pnpm run deploy:firebase:docs"
 
 [tasks."deploy:vercel"]
 description = "Deploy the site to Vercel"
