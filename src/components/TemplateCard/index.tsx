@@ -3,8 +3,13 @@ import Image from "next/image";
 
 export function TemplateCard({ title, description, icon, url }: { title: string, description: string, icon: string, url?: string }) {
     return <Card className="p-8">
-        <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 text-primary">
-            <Image src={`${icon}.png`} alt={`${title} icon`} />
+        <Card.Header className="relative h-12 w-12 overflow-hidden rounded-lg bg-primary/10 p-0 text-primary">
+            <Image
+                src={`/${icon}.png`}
+                alt={`${title} icon`}
+                fill
+                sizes="48px"
+            />
         </Card.Header>
         <Card.Content className="p-0 pt-4">
             <Card.Title className="mb-2 text-xl font-semibold">
