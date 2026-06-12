@@ -1,10 +1,6 @@
 name: Deploy Site
 
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'docs/**'
   workflow_dispatch:
     inputs:
       environment:
@@ -37,7 +33,7 @@ jobs:
         run: mise run deploy:vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ENV: ${{ github.event.inputs.environment || 'production' }}
+          VERCEL_ENV: ${{ github.event.inputs.environment }}
 
   deploy-firebase:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.provider == 'firebase' }}
