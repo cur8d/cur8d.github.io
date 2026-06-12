@@ -20,11 +20,11 @@ export default function Page() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 text-center">
         <h1 className="mb-6 text-5xl font-extrabold tracking-tight lg:text-6xl text-muted-foreground">
-          Build faster with <span className="text-primary">cur8d.dev</span>
+          Build faster with <span className="text-primary">cur8d</span> templates
         </h1>
-        <div className="mx-auto mb-10 max-w-2xl text-xl text-muted-foreground">
+        <div className="mx-auto mb-10 text-xl text-muted-foreground">
           <p>
-            Opinionated production-ready templates for mobile, cloud, and web developers.
+            Opinionated production-ready templates for mobile, cloud, and web developers
           </p>
         </div>
       </section >
