@@ -27,10 +27,11 @@ export default function Page() {
             Opinionated production-ready templates for mobile, cloud, and web developers
           </p>
         </div>
-      </section >
+      </section>
 
       {/* Templates Section */}
-      < section className="container mx-auto px-4" >
+      <section className="container mx-auto px-4">
+        <h2 className="sr-only">Available Templates</h2>
         <div className="grid gap-8 md:grid-cols-3">
           <TemplateCard
             title="cur8d.py"
@@ -50,7 +51,7 @@ export default function Page() {
             icon="aws"
           />
         </div>
-      </section >
-    </div >
+      </section>
+    </div>
   );
 }
