@@ -9,7 +9,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold">cur8d</span>
+            <span className="font-bold">cur8d.dev</span>
           </Link>
         </div>
 

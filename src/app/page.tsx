@@ -1,14 +1,12 @@
-import { Card } from "@heroui/react";
-import { Shield, Zap, Globe, Github } from "lucide-react";
-import Link from "next/link";
+import { TemplateCard } from "@/components/TemplateCard";
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "cur8d.tsx",
-    "description": "A modern typescript Next.js starter template with HeroUI and Tailwind CSS for building high-performance, accessible, and type-safe web applications.",
-    "url": "https://github.com/cur8d/typescript",
+    "name": "cur8d.dev",
+    "description": "Opinionated production-ready templates for mobile, cloud, and web applications.",
+    "url": "https://cur8d.dev",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
   };
@@ -22,72 +20,35 @@ export default function Page() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 text-center">
         <h1 className="mb-6 text-5xl font-extrabold tracking-tight lg:text-6xl text-muted-foreground">
-          Build faster with <span className="text-primary">cur8d</span>
+          Build faster with <span className="text-primary">cur8d.dev</span>
         </h1>
         <div className="mx-auto mb-10 max-w-2xl text-xl text-muted-foreground">
           <p>
-            High-performance, accessible, and type-safe template for your next big idea.
+            Opinionated production-ready templates for mobile, cloud, and web developers.
           </p>
-          <p>Powered by <span className="text-primary">Typescript</span>, <span className="text-primary">Next.js</span>, <span className="text-primary">HeroUI</span>, and <span className="text-primary">Tailwind CSS</span>.</p>
-        </div>
-
-        <div className="flex justify-center gap-4">
-          <Link
-            href="https://github.com/cur8d/typescript"
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-background px-8 py-3 text-sm font-medium transition-colors hover:bg-secondary"
-          >
-            <Github className="h-5 w-5" />
-            GitHub
-          </Link>
         </div>
       </section >
 
-      {/* Features Section */}
+      {/* Templates Section */}
       < section className="container mx-auto px-4" >
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold">Everything you need</h2>
-          <p className="text-muted-foreground">Stop worrying about boilerplate and start building features.</p>
-        </div>
         <div className="grid gap-8 md:grid-cols-3">
-          <Card className="p-8">
-            <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 text-primary">
-              <Zap className="h-6 w-6" />
-            </Card.Header>
-            <Card.Content className="p-0 pt-4">
-              <Card.Title className="mb-2 text-xl font-semibold">
-                Lightning Fast
-              </Card.Title>
-              <p className="text-muted-foreground">
-                Optimized for performance with Next.js App Router and React Server Components.
-              </p>
-            </Card.Content>
-          </Card>
-          <Card className="p-8">
-            <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 text-primary">
-              <Shield className="h-6 w-6" />
-            </Card.Header>
-            <Card.Content className="p-0 pt-4">
-              <Card.Title className="mb-2 text-xl font-semibold">
-                Type Safe
-              </Card.Title>
-              <p className="text-muted-foreground">
-                Built with TypeScript and Zod for robust, error-free development.
-              </p>
-            </Card.Content>
-          </Card>
-          <Card className="p-8">
-            <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 text-primary">
-              <Globe className="h-6 w-6" />
-            </Card.Header>
-            <Card.Content className="p-0 pt-4">
-              <Card.Title className="mb-2 text-xl font-semibold">
-                Accessible
-              </Card.Title>
-              <p className="text-muted-foreground">
-                WAI-ARIA compliant components ensuring your app is usable by everyone.
-              </p>
-            </Card.Content>
-          </Card>
+          <TemplateCard
+            title="cur8d.py"
+            description="Production-ready Fully-loaded Python Project Template"
+            icon="cur8d.py.png"
+            url="https://cur8d.dev/python"
+          />
+          <TemplateCard
+            title="cur8d.tsx"
+            description="Production-ready TypeScript Web-Application Template with Next.js, Tailwind CSS, and HeroUI"
+            icon="cur8d.tsx.png"
+            url="https://cur8d.dev/typescript"
+          />
+          <TemplateCard
+            title="cur8d.lambda"
+            description="Production-ready AWS Lambda Templates in Python"
+            icon="cur8d.lambda.png"
+          />
         </div>
       </section >
     </div >
