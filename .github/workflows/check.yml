@@ -18,8 +18,8 @@ jobs:
         run: mise run lint
       - name: Test
         run: mise run test:coverage
-      # - name: Install Playwright Browsers
-      #   run: mise run playwright:install
+      - name: Install Playwright Browsers
+        run: mise run playwright:install
       - name: Build
         run: mise run build
       - name: Run E2E tests
