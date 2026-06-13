@@ -2,8 +2,8 @@ import { Card, Link } from "@heroui/react";
 
 export function TemplateCard({ title, description, icon, url }: { title: string, description: string, icon: string, url?: string }) {
     return <Card className="p-8">
-        <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 text-[#64c1f4] font-semibold overflow-hidden">
-            <span>{`.${icon}`}</span>
+        <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 font-semibold overflow-hidden">
+            <span className="text-card-icon">{`.${icon}`}</span>
         </Card.Header>
         <Card.Content className="p-0 pt-4">
             <Card.Title className="mb-2 text-xl font-semibold">
