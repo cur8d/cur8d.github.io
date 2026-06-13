@@ -1,5 +1,5 @@
 [tools]
-node = "lts"
+node = "24.0.0"
 pnpm = "latest"
 
 [shell_alias]
@@ -11,6 +11,16 @@ b = "mise run build"
 d = "mise run dev"
 s = "mise run start"
 v = "mise run verify"
+
+g = "git"
+gs = "git status"
+gb = "git branch"
+gt = "git checkout"
+gl = "git log"
+ga = "git add"
+gc = "git commit -a -m"
+gp = "git push"
+gr = "git rebase --merge"
 
 [tasks.install]
 description = "Install dependencies"

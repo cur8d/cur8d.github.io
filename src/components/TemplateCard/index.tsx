@@ -1,10 +1,9 @@
 import { Card, Link } from "@heroui/react";
-import Image from "next/image";
 
 export function TemplateCard({ title, description, icon, url }: { title: string, description: string, icon: string, url?: string }) {
     return <Card className="p-8">
-        <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 text-primary overflow-hidden">
-            <Image src={`/${icon}.png`} alt={`${title} icon`} width={48} height={48} />
+        <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 font-semibold overflow-hidden">
+            <span className="text-card-icon">{`.${icon}`}</span>
         </Card.Header>
         <Card.Content className="p-0 pt-4">
             <Card.Title className="mb-2 text-xl font-semibold">
@@ -24,7 +23,7 @@ export function TemplateCard({ title, description, icon, url }: { title: string,
                 >
                     Go to template
                     <Link.Icon aria-hidden="true" />
-                </Link>) || <span className="text-muted-foreground">Coming Soon</span>
+                </Link>) || <span className="text-secondary-foreground">Coming Soon</span>
             }
         </Card.Footer>
     </Card>

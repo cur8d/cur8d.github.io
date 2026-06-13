@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cur8d",
-  description: "A modern Next.js starter template",
+  description: "Opinionated templates for mobile, cloud, and web developers",
   icons: {
     icon: "/cur8d.png",
   },
