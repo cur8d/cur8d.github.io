@@ -35,7 +35,7 @@ export default function Page() {
         <div className="grid gap-8 md:grid-cols-3">
           <TemplateCard
             title="cur8d.py"
-            description="Python project template to get you started quickly with best practices"
+            description="Python project template for quick start with best practices"
             icon="py"
             url="https://cur8d.dev/python"
           />
