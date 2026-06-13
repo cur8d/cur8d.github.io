@@ -41,7 +41,7 @@ export default function Page() {
           />
           <TemplateCard
             title="cur8d.tsx"
-            description="TypeScript web-application template powered by Next.js, Tailwind CSS, and HeroUI"
+            description="TypeScript web-application starter powered by Next.js, Tailwind CSS, and HeroUI"
             icon="tsx"
             url="https://cur8d.dev/typescript"
           />
