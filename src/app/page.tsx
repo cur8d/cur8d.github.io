@@ -35,19 +35,19 @@ export default function Page() {
         <div className="grid gap-8 md:grid-cols-3">
           <TemplateCard
             title="cur8d.py"
-            description="Production-ready Fully-loaded Python Project Template"
+            description="Python project template to get you started quickly with best practices"
             icon="python"
             url="https://cur8d.dev/python"
           />
           <TemplateCard
             title="cur8d.tsx"
-            description="Production-ready TypeScript Web-Application Template with Next.js, Tailwind CSS, and HeroUI"
+            description="TypeScript web-application template powered by Next.js, Tailwind CSS, and HeroUI"
             icon="typescript"
             url="https://cur8d.dev/typescript"
           />
           <TemplateCard
-            title="cur8d.lambda"
-            description="Production-ready AWS Lambda Templates in Python"
+            title="cur8d.aws"
+            description="AWS Lambda templates in Python"
             icon="aws"
           />
         </div>
