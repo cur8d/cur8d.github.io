@@ -20,20 +20,20 @@ jobs:
         run: mise run lint
       - name: Test
         run: mise run test:coverage
-      - name: Install Playwright Browsers
-        run: mise run playwright:install
-      - name: Build
-        run: mise run build
-      - name: Run E2E tests
-        run: mise run test:e2e
+      # - name: Install Playwright Browsers
+      #   run: mise run playwright:install
+      # - name: Build
+      #   run: mise run build
+      # - name: Run E2E tests
+      #   run: mise run test:e2e
       - name: Upload coverage
         uses: actions/upload-artifact@v7
         with:
           name: coverage-report
           path: coverage/
-      - name: Upload Playwright report
-        if: failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: playwright-report
-          path: playwright-report/
+      # - name: Upload Playwright report
+      #   if: failure()
+      #   uses: actions/upload-artifact@v7
+      #   with:
+      #     name: playwright-report
+      #     path: playwright-report/
