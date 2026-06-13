@@ -36,13 +36,13 @@ export default function Page() {
           <TemplateCard
             title="cur8d.py"
             description="Python project template to get you started quickly with best practices"
-            icon="python"
+            icon="py"
             url="https://cur8d.dev/python"
           />
           <TemplateCard
             title="cur8d.tsx"
             description="TypeScript web-application template powered by Next.js, Tailwind CSS, and HeroUI"
-            icon="typescript"
+            icon="tsx"
             url="https://cur8d.dev/typescript"
           />
           <TemplateCard
