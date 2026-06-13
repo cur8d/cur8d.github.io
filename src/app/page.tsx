@@ -46,6 +46,11 @@ export default function Page() {
             url="https://cur8d.dev/typescript"
           />
           <TemplateCard
+            title="cur8d.kts"
+            description="Kotlin Multiplatform (KMP) application skeleton for Android, iOS, and web"
+            icon="kts"
+          />
+          <TemplateCard
             title="cur8d.aws"
             description="AWS Lambda templates in Python"
             icon="aws"
