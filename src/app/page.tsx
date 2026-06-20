@@ -1,4 +1,5 @@
 import { TemplateCard } from "@/components/TemplateCard";
+import { CodeBlock } from "@/components/CodeBlock";
 
 export default function Page() {
   const jsonLd = {
@@ -26,6 +27,15 @@ export default function Page() {
           <p>
             Opinionated production-ready templates for mobile, cloud, and web developers
           </p>
+        </div>
+        <div className="mx-auto max-w-md">
+          <CodeBlock>
+            <CodeBlock.Header>
+              <span>terminal</span>
+              <CodeBlock.CopyButton code="npx create-cur8" />
+            </CodeBlock.Header>
+            <CodeBlock.Code code="npx create-cur8" />
+          </CodeBlock>
         </div>
       </section>
 

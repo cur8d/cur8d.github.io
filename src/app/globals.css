@@ -99,4 +99,20 @@
   [cmdk-empty=""] {
     color: hsl(var(--muted-foreground)) !important;
   }
+
+  .code-block {
+    @apply relative flex flex-col rounded-xl border border-border bg-secondary/50 overflow-hidden;
+  }
+
+  .code-block__header {
+    @apply flex items-center justify-between px-4 py-2 border-b border-border bg-secondary/30 text-xs font-medium text-muted-foreground;
+  }
+
+  .code-block__code {
+    @apply p-4 overflow-x-auto font-mono text-sm leading-relaxed;
+  }
+
+  .code-block__copy-button {
+    @apply hover:bg-secondary/80 transition-colors;
+  }
 }
