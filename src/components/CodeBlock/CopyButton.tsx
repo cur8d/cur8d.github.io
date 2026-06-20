@@ -21,7 +21,7 @@ export function CodeBlockCopyButton({ code, className }: { code: string; classNa
     <Button
       isIconOnly
       size="sm"
-      variant="light"
+      variant="ghost"
       className={`code-block__copy-button ${className || ""}`}
       onClick={copyToClipboard}
       aria-label="Copy code"
