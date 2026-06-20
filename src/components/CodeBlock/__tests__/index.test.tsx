@@ -15,7 +15,7 @@ describe("CodeBlock", () => {
   });
 
   it("renders the code correctly", () => {
-    const code = "npx create-cur8";
+    const code = "npx create-cur8d";
     render(
       <CodeBlock>
         <CodeBlock.Code code={code} />
@@ -26,7 +26,7 @@ describe("CodeBlock", () => {
   });
 
   it("copies code to clipboard when copy button is clicked", async () => {
-    const code = "npx create-cur8";
+    const code = "npx create-cur8d";
     render(
       <CodeBlock>
         <CodeBlock.Header>

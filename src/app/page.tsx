@@ -32,9 +32,9 @@ export default function Page() {
           <CodeBlock>
             <CodeBlock.Header>
               <span>terminal</span>
-              <CodeBlock.CopyButton code="npx create-cur8" />
+              <CodeBlock.CopyButton code="npx create-cur8d" />
             </CodeBlock.Header>
-            <CodeBlock.Code code="npx create-cur8" />
+            <CodeBlock.Code code="npx create-cur8d" />
           </CodeBlock>
         </div>
       </section>
