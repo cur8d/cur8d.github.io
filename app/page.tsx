@@ -1,5 +1,6 @@
 import { TemplateCard } from "@/components/TemplateCard";
 import { CodeBlock } from "@/components/CodeBlock";
+import { templates } from "@/data/templates";
 
 export default function Page() {
   const jsonLd = {
@@ -46,28 +47,9 @@ export default function Page() {
       <section className="container mx-auto px-4">
         <h2 className="sr-only">Available Templates</h2>
         <div className="grid gap-8 md:grid-cols-3">
-          <TemplateCard
-            title="cur8d.py"
-            description="Python project template for quick start with best practices"
-            icon="py"
-            url="https://cur8d.dev/python"
-          />
-          <TemplateCard
-            title="cur8d.tsx"
-            description="TypeScript web-application starter powered by Next.js, Tailwind CSS, and HeroUI"
-            icon="tsx"
-            url="https://cur8d.dev/typescript"
-          />
-          <TemplateCard
-            title="cur8d.kts"
-            description="Kotlin Multiplatform (KMP) application skeleton for Android, iOS, and web"
-            icon="kts"
-          />
-          <TemplateCard
-            title="cur8d.aws"
-            description="AWS Lambda templates in Python"
-            icon="aws"
-          />
+          {templates.map((template) => (
+            <TemplateCard key={template.title} {...template} />
+          ))}
         </div>
       </section>
     </div>

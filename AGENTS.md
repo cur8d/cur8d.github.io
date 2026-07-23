@@ -14,7 +14,7 @@ cur8d is a production-ready Next.js starter optimized for data integration and s
 
 ## 3. Directory Structure
 
-- `app`: Routes, layouts, components (`app/components`), hooks (`app/hooks`), and logic/data layer (`app/lib`).
+- `app`: Routes, layouts, components (`app/components`), hooks (`app/hooks`), data (`app/data`), and types (`app/types`).
 - `tests`: Unit tests (`tests/unit`) and E2E tests (`tests/e2e`).
 - `docs`: Nextra v4 documentation.
 
@@ -54,7 +54,7 @@ Register in `app/config/shortcuts.ts`, use `useShortcuts` hook, add UI hint.
 
 ## 11. Environment Variables
 
-Validated via Zod in `app/lib/env.ts`.
+Validate via Zod in `app/lib/env.ts` when required.
 
 ## 12. Local Development Commands
 
@@ -80,4 +80,4 @@ Wiring via `next-themes` and Tailwind v4 variables.
 
 ## 17. Data layer
 
-Mock data in `app/lib/data/mock.ts`, migration path to Supabase documented in `app/lib/data/README.md`.
+Mock data in `app/data/templates.ts`, migration path to Supabase documented in `app/data/README.md`.

@@ -1,16 +1,14 @@
 import { Card, Link } from "@heroui/react";
+import { Template } from "@/types/template";
+
+export interface TemplateCardProps extends Template {}
 
 export function TemplateCard({
   title,
   description,
   icon,
   url,
-}: {
-  title: string;
-  description: string;
-  icon: string;
-  url?: string;
-}) {
+}: TemplateCardProps) {
   return (
     <Card className="p-8">
       <Card.Header className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 p-0 font-semibold overflow-hidden">
