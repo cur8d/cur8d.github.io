@@ -33,6 +33,7 @@
     "postcss": "^8.5.19",
     "react": "19.2.7",
     "react-dom": "19.2.7",
+    "react-icons": "^5.7.0",
     "zod": "4.4.3"
   },
   "devDependencies": {
@@ -63,14 +64,5 @@
     "typescript": "5.7.3",
     "vite": "^8.1.5",
     "vitest": "4.1.10"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "protobufjs",
-      "re2",
-      "sharp",
-      "unrs-resolver"
-    ]
   }
 }
