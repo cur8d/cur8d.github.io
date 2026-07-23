@@ -7,11 +7,7 @@ interface CodeBlockProps {
 }
 
 function CodeBlockRoot({ children, className }: CodeBlockProps) {
-  return (
-    <div className={`code-block ${className || ""}`}>
-      {children}
-    </div>
-  );
+  return <div className={`code-block ${className || ""}`}>{children}</div>;
 }
 
 interface CodeBlockHeaderProps {
@@ -21,9 +17,7 @@ interface CodeBlockHeaderProps {
 
 function CodeBlockHeader({ children, className }: CodeBlockHeaderProps) {
   return (
-    <div className={`code-block__header ${className || ""}`}>
-      {children}
-    </div>
+    <div className={`code-block__header ${className || ""}`}>{children}</div>
   );
 }
 
@@ -31,12 +25,22 @@ interface CodeBlockCodeProps {
   code: string;
   language?: string;
   className?: string;
+  showPrompt?: boolean;
+  showCursor?: boolean;
 }
 
-function CodeBlockCode({ code, language, className }: CodeBlockCodeProps) {
+function CodeBlockCode({
+  code,
+  language,
+  className,
+  showPrompt = false,
+  showCursor = false,
+}: CodeBlockCodeProps) {
   return (
     <pre className={`code-block__code ${className || ""}`}>
+      {showPrompt && <span className="code-block__prompt">$ </span>}
       <code className={language ? `language-${language}` : ""}>{code}</code>
+      {showCursor && <span className="code-block__cursor" aria-hidden="true" />}
     </pre>
   );
 }

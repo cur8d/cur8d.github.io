@@ -13,7 +13,7 @@ export function Providers({ children }: ProvidersProps) {
 
   return (
     <RouterProvider navigate={router.push}>
-      <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+      <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem>
         {children}
       </NextThemesProvider>
     </RouterProvider>
