@@ -25,14 +25,35 @@ describe("CodeBlock", () => {
     expect(screen.getByText(code)).toBeInTheDocument();
   });
 
+  it("renders prompt and cursor when requested", () => {
+    const code = "npx create-cur8d";
+    const { container } = render(
+      <CodeBlock>
+        <CodeBlock.Code code={code} showPrompt showCursor />
+      </CodeBlock>,
+    );
+
+    expect(screen.getByText("$")).toBeInTheDocument();
+    expect(screen.getByText(code)).toBeInTheDocument();
+    expect(container.querySelector(".code-block__cursor")).toBeInTheDocument();
+  });
+
+  it("renders CodeBlock.Header if used", () => {
+    render(
+      <CodeBlock>
+        <CodeBlock.Header>Header Title</CodeBlock.Header>
+      </CodeBlock>,
+    );
+
+    expect(screen.getByText("Header Title")).toBeInTheDocument();
+  });
+
   it("copies code to clipboard when copy button is clicked", async () => {
     const code = "npx create-cur8d";
     render(
       <CodeBlock>
-        <CodeBlock.Header>
-          <CodeBlock.CopyButton code={code} />
-        </CodeBlock.Header>
-        <CodeBlock.Code code={code} />
+        <CodeBlock.Code code={code} showPrompt showCursor />
+        <CodeBlock.CopyButton code={code} />
       </CodeBlock>,
     );
 

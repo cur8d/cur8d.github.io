@@ -33,12 +33,13 @@ export default function Page() {
           </p>
         </div>
         <div className="mx-auto max-w-md">
-          <CodeBlock>
-            <CodeBlock.Header>
-              <span>terminal</span>
-              <CodeBlock.CopyButton code="npx create-cur8d" />
-            </CodeBlock.Header>
-            <CodeBlock.Code code="npx create-cur8d" />
+          <CodeBlock className="flex-row items-center justify-between px-4 py-3">
+            <CodeBlock.Code
+              code="npx create-cur8d"
+              showPrompt
+              className="p-0"
+            />
+            <CodeBlock.CopyButton code="npx create-cur8d" />
           </CodeBlock>
         </div>
       </section>
