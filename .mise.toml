@@ -19,7 +19,7 @@ gb = "git branch"
 gco = "git checkout"
 gl = "git log"
 ga = "git add"
-gc = "git commit -a -m"
+gc = "git commit"
 gp = "git push"
 gr = "git rebase --merge"
 
