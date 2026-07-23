@@ -7,14 +7,14 @@ export const templates: Template[] = [
       "Production-ready AWS Lambda templates in Python for different real-life scenarios",
     icon: "aws",
     docs: "https://cur8d.dev/lambda",
-    github: "https://github.com/cur8d/cur8d.aws",
+    github: "https://github.com/cur8d/lambda",
   },
   {
     title: "cur8d.py",
     description: "Python project template for quick start with best practices",
     icon: "py",
     docs: "https://cur8d.dev/python",
-    github: "https://github.com/cur8d/cur8d.py",
+    github: "https://github.com/cur8d/python",
   },
   {
     title: "cur8d.tsx",
@@ -23,7 +23,7 @@ export const templates: Template[] = [
     icon: "tsx",
     docs: "https://cur8d.dev/typescript",
     preview: "https://typescript.cur8d.dev",
-    github: "https://github.com/cur8d/cur8d.tsx",
+    github: "https://github.com/cur8d/typescript",
     status: "beta",
   },
   {
