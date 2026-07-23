@@ -3,7 +3,8 @@ import { Template } from "@/types/template";
 export const templates: Template[] = [
   {
     title: "cur8d.aws",
-    description: "AWS Lambda templates in Python",
+    description:
+      "Production-ready AWS Lambda templates in Python for different real-life scenarios",
     icon: "aws",
     docs: "https://cur8d.dev/lambda",
     github: "https://github.com/cur8d/cur8d.aws",
