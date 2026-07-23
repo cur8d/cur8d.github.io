@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { CodeBlock } from "../index";
+import { CodeBlock } from "@/components/CodeBlock";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
 // Mock navigator.clipboard
