@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "eslint .",
+    "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "test:ui": "vitest --ui",

@@ -19,7 +19,7 @@ describe("CodeBlock", () => {
     render(
       <CodeBlock>
         <CodeBlock.Code code={code} />
-      </CodeBlock>
+      </CodeBlock>,
     );
 
     expect(screen.getByText(code)).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe("CodeBlock", () => {
           <CodeBlock.CopyButton code={code} />
         </CodeBlock.Header>
         <CodeBlock.Code code={code} />
-      </CodeBlock>
+      </CodeBlock>,
     );
 
     const copyButton = screen.getByLabelText("Copy code");
@@ -43,7 +43,9 @@ describe("CodeBlock", () => {
 
     // Check if it changes to check icon (success)
     await waitFor(() => {
-        expect(screen.queryByLabelText("Copy code")?.querySelector(".text-success")).toBeInTheDocument();
+      expect(
+        screen.queryByLabelText("Copy code")?.querySelector(".text-success"),
+      ).toBeInTheDocument();
     });
   });
 });

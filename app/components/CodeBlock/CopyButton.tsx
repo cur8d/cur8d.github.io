@@ -4,7 +4,13 @@ import { useState } from "react";
 import { Button } from "@heroui/react";
 import { Copy, Check } from "lucide-react";
 
-export function CodeBlockCopyButton({ code, className }: { code: string; className?: string }) {
+export function CodeBlockCopyButton({
+  code,
+  className,
+}: {
+  code: string;
+  className?: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
@@ -26,7 +32,11 @@ export function CodeBlockCopyButton({ code, className }: { code: string; classNa
       onClick={copyToClipboard}
       aria-label="Copy code"
     >
-      {copied ? <Check className="text-success h-4 w-4" /> : <Copy className="h-4 w-4" />}
+      {copied ? (
+        <Check className="text-success h-4 w-4" />
+      ) : (
+        <Copy className="h-4 w-4" />
+      )}
     </Button>
   );
 }

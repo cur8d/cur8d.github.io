@@ -7,11 +7,7 @@ interface CodeBlockProps {
 }
 
 function CodeBlockRoot({ children, className }: CodeBlockProps) {
-  return (
-    <div className={`code-block ${className || ""}`}>
-      {children}
-    </div>
-  );
+  return <div className={`code-block ${className || ""}`}>{children}</div>;
 }
 
 interface CodeBlockHeaderProps {
@@ -21,9 +17,7 @@ interface CodeBlockHeaderProps {
 
 function CodeBlockHeader({ children, className }: CodeBlockHeaderProps) {
   return (
-    <div className={`code-block__header ${className || ""}`}>
-      {children}
-    </div>
+    <div className={`code-block__header ${className || ""}`}>{children}</div>
   );
 }
 

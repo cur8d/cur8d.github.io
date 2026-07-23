@@ -48,13 +48,22 @@ export default [
       "@next/next/no-duplicate-head": "error",
       "@next/next/no-head-import-in-document": "error",
       "@next/next/no-script-component-in-head": "error",
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_" },
+      ],
       "@typescript-eslint/no-explicit-any": "warn",
       "no-unused-vars": "off",
-      "no-undef": "error"
+      "no-undef": "error",
     },
   },
   {
-    ignores: [".next/*", "node_modules/*", "coverage/*", "playwright-report/*", "out/*"],
+    ignores: [
+      ".next/*",
+      "node_modules/*",
+      "coverage/*",
+      "playwright-report/*",
+      "out/*",
+    ],
   },
 ];

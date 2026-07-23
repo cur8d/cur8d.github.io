@@ -34,6 +34,6 @@ export function useSearchState() {
     // Compatibility with HeroUI useOverlayState if needed
     open: onOpen,
     close: onClose,
-    setOpen: onOpenChange
+    setOpen: onOpenChange,
   };
 }

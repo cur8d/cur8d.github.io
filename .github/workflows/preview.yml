@@ -4,17 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to deploy to'
+        description: "Environment to deploy to"
         required: true
-        default: 'preview'
+        default: "preview"
         type: choice
         options:
           - production
           - preview
       provider:
-        description: 'Deployment provider'
+        description: "Deployment provider"
         required: true
-        default: 'vercel'
+        default: "vercel"
         type: choice
         options:
           - vercel

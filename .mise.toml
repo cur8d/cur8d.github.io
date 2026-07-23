@@ -6,6 +6,7 @@ pnpm = "latest"
 m = "mise run"
 i = "mise run install"
 l = "mise run lint"
+f = "mise run format"
 t = "mise run test"
 b = "mise run build"
 d = "mise run dev"
@@ -46,6 +47,11 @@ alias = "s"
 description = "Run linting"
 run = "pnpm run lint"
 alias = "l"
+
+[tasks.format]
+description = "Run formatting"
+run = "pnpm run format"
+alias = "f"
 
 [tasks.typecheck]
 description = "Run typechecking"
