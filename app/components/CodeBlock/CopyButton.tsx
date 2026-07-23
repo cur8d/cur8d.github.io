@@ -25,23 +25,36 @@ export function CodeBlockCopyButton({
 
   return (
     <Tooltip>
-      <Tooltip.Trigger>
-        <Button
-          isIconOnly
-          size="sm"
-          variant="ghost"
-          className={`code-block__copy-button ${className || ""}`}
-          onClick={copyToClipboard}
-          aria-label="Copy code"
-        >
-          {copied ? (
-            <Check className="text-success h-4 w-4" />
-          ) : (
-            <Copy className="h-4 w-4" />
-          )}
-        </Button>
-      </Tooltip.Trigger>
-      <Tooltip.Content>{copied ? "Copied!" : "Copy code"}</Tooltip.Content>
+      <Tooltip.Trigger
+        render={(triggerProps) => {
+          const buttonProps = triggerProps as unknown as React.ComponentProps<
+            typeof Button
+          >;
+          return (
+            <Button
+              {...buttonProps}
+              isIconOnly
+              size="sm"
+              variant="ghost"
+              className={`code-block__copy-button ${className || ""}`}
+              onClick={(e) => {
+                buttonProps.onClick?.(e);
+                copyToClipboard();
+              }}
+              aria-label="Copy to clipboard"
+            >
+              {copied ? (
+                <Check className="text-success h-4 w-4" />
+              ) : (
+                <Copy className="h-4 w-4" />
+              )}
+            </Button>
+          );
+        }}
+      />
+      <Tooltip.Content>
+        {copied ? "Copied!" : "Copy to clipboard"}
+      </Tooltip.Content>
     </Tooltip>
   );
 }

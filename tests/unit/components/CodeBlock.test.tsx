@@ -57,7 +57,7 @@ describe("CodeBlock", () => {
       </CodeBlock>,
     );
 
-    const copyButton = screen.getByLabelText("Copy code");
+    const copyButton = screen.getByLabelText("Copy to clipboard");
     fireEvent.click(copyButton);
 
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith(code);
@@ -65,7 +65,9 @@ describe("CodeBlock", () => {
     // Check if it changes to check icon (success)
     await waitFor(() => {
       expect(
-        screen.queryByLabelText("Copy code")?.querySelector(".text-success"),
+        screen
+          .queryByLabelText("Copy to clipboard")
+          ?.querySelector(".text-success"),
       ).toBeInTheDocument();
     });
   });
