@@ -22,7 +22,7 @@ export default function Page() {
       />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 text-center">
-        <h1 className="mb-6 text-5xl font-extrabold tracking-tight lg:text-6xl text-muted-foreground">
+        <h1 className="mb-6 text-5xl font-extrabold tracking-tight lg:text-6xl text-foreground">
           Build faster with <span className="text-primary">cur8d</span>{" "}
           templates
         </h1>

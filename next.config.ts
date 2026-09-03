@@ -5,6 +5,17 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  compress: true,
+  poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: [
+      "@heroui/react",
+      "@heroui/styles",
+      "lucide-react",
+      "react-icons",
+      "framer-motion",
+    ],
+  },
 };
 
 export default nextConfig;
