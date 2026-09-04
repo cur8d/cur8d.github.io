@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "npx serve@latest out",
+    "start": "serve out",
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
@@ -60,6 +60,7 @@
     "jsdom": "30.0.1",
     "playwright": "1.62.1",
     "prettier": "3.9.6",
+    "serve": "^14.2.6",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
     "vite": "^8.2.2",
