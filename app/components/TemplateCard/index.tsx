@@ -53,7 +53,7 @@ export function TemplateCard({
             )}
             {preview && (
               <Link
-                aria-label={`Go to ${title} demo (opens in new tab)`}
+                aria-label={`Go to ${title} preview (opens in new tab)`}
                 href={preview}
                 rel="noopener noreferrer"
                 target="_blank"
