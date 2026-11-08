@@ -80,7 +80,7 @@ run = "pnpm run test:e2e:ui"
 
 [tasks."verify"]
 description = "Run all tests"
-depends = ["lint", "typecheck", "test", "test:coverage", "test:e2e", "test:e2e:ui"]
+depends = ["lint", "typecheck", "test", "test:coverage", "test:e2e"]
 alias = "v"
 
 [tasks."playwright:install"]
