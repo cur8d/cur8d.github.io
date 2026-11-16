@@ -4,6 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "friday"
     ignore:
       - dependency-name: "typescript"
     groups:
@@ -15,3 +16,4 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "friday"
