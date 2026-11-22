@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Tooltip } from "@heroui/react";
 import { Copy, Check } from "lucide-react";
 
@@ -12,12 +12,24 @@ export function CodeBlockCopyButton({
   className?: string;
 }) {
   const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      timeoutRef.current = setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Failed to copy: ", err);
     }
@@ -44,10 +56,13 @@ export function CodeBlockCopyButton({
               aria-label="Copy to clipboard"
             >
               {copied ? (
-                <Check className="text-success h-4 w-4" />
+                <Check className="text-success h-4 w-4" aria-hidden="true" />
               ) : (
-                <Copy className="h-4 w-4" />
+                <Copy className="h-4 w-4" aria-hidden="true" />
               )}
+              <span className="sr-only" role="status" aria-live="polite">
+                {copied ? "Copied to clipboard" : ""}
+              </span>
             </Button>
           );
         }}

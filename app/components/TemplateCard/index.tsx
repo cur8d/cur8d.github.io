@@ -27,7 +27,7 @@ export function TemplateCard({
             target="_blank"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            <FaGithub className="size-6" />
+            <FaGithub className="size-6" aria-hidden="true" />
           </Link>
         )}
       </Card.Header>
