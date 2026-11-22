@@ -18,7 +18,9 @@ export default function Page() {
     <div className="flex flex-col gap-20 pb-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
       />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 text-center">

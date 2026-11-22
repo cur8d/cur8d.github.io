@@ -37,4 +37,21 @@ describe("TemplateCard", () => {
 
     expect(screen.getByText("Coming Soon")).toBeInTheDocument();
   });
+
+  it("renders preview link and lowercase status chip when provided", () => {
+    render(
+      <TemplateCard
+        title="cur8d.tsx"
+        description="Next.js starter"
+        icon="tsx"
+        preview="https://typescript.cur8d.dev"
+        status="BETA"
+      />,
+    );
+
+    expect(screen.getByText("beta")).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /Go to cur8d.tsx preview/i }),
+    ).toHaveAttribute("href", "https://typescript.cur8d.dev");
+  });
 });

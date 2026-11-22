@@ -62,13 +62,42 @@ describe("CodeBlock", () => {
 
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith(code);
 
-    // Check if it changes to check icon (success)
+    // Check if it changes to check icon (success) and announces status
     await waitFor(() => {
       expect(
         screen
           .queryByLabelText("Copy to clipboard")
           ?.querySelector(".text-success"),
       ).toBeInTheDocument();
+      expect(screen.getByRole("status")).toHaveTextContent(
+        "Copied to clipboard",
+      );
     });
+  });
+
+  it("logs an error when copying to clipboard fails", async () => {
+    const consoleError = vi
+      .spyOn(console, "error")
+      .mockImplementation(() => {});
+    vi.mocked(navigator.clipboard.writeText).mockRejectedValueOnce(
+      new Error("Clipboard denied"),
+    );
+
+    render(
+      <CodeBlock>
+        <CodeBlock.Code code="npx create-cur8d" />
+        <CodeBlock.CopyButton code="npx create-cur8d" />
+      </CodeBlock>,
+    );
+
+    fireEvent.click(screen.getByLabelText("Copy to clipboard"));
+
+    await waitFor(() => {
+      expect(consoleError).toHaveBeenCalledWith(
+        "Failed to copy: ",
+        expect.any(Error),
+      );
+    });
+    consoleError.mockRestore();
   });
 });

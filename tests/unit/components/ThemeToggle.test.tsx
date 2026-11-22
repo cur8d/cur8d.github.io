@@ -37,6 +37,21 @@ describe("ThemeToggle", () => {
     const button = screen.getByLabelText("Toggle theme");
     fireEvent.click(button);
 
-    expect(setTheme).toHaveBeenCalled();
+    expect(setTheme).toHaveBeenCalledWith("dark");
+  });
+
+  it("switches resolved dark theme to light when theme is system", () => {
+    (useTheme as Mock).mockReturnValue({
+      theme: "system",
+      resolvedTheme: "dark",
+      setTheme,
+    });
+
+    render(<ThemeToggle />);
+
+    const button = screen.getByLabelText("Toggle theme");
+    fireEvent.click(button);
+
+    expect(setTheme).toHaveBeenCalledWith("light");
   });
 });
